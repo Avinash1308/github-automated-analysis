@@ -1,1 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Result - GitHub Automated Analysis{% endblock %}
+
+{% block content %}
+<div class="result">
+    <h2>Analysis Result</h2>
+    <p>The most technically complex repository is:</p>
+    <h3><a href="{{ repository_url }}">{{ repository_name }}</a></h3>
+
+    <div class="gpt-analysis">
+        <h4>GPT Analysis</h4>
+        <p>{{ gpt_analysis }}</p>
+    </div>
+
+    <div class="additional-info">
+        <h4>Additional Information</h4>
+        <ul>
+            <li>Owner: {{ repository_owner }}</li>
+            <li>Stars: {{ repository_stars }}</li>
+            <li>Language: {{ repository_language }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
 
