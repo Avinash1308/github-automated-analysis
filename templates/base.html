@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>{% block title %}GitHub Automated Analysis - Home{% endblock %}</title>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>GitHub Automated Analysis</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="content">
-        {% block content %}
-    <h1>Welcome to the GitHub Automated Analysis</h1>
-    <p>This is the home page of the GitHub Automated Analysis project.</p>
-{% endblock %}
+    <div class="container">
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
     </div>
+
+    <footer>
+        <p>GitHub Automated Analysis &copy; 2023</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
-
